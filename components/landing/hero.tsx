@@ -1,3 +1,4 @@
+// components/landing/hero.tsx
 import {
   Gavel,
   Layers,
@@ -96,7 +97,7 @@ export function Hero() {
                 return (
                   <div
                     key={item.label}
-                    className="flex flex-1 min-w-37.5 sm:min-w-40 items-center justify-center gap-2.5 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white shadow-sm backdrop-blur transition-all hover:border-gold/50 hover:bg-white/10"
+                    className="flex flex-1 min-w-[150px] sm:min-w-[160px] items-center justify-center gap-2.5 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white shadow-sm backdrop-blur transition-all hover:border-gold/50 hover:bg-white/10"
                   >
                     <Icon className="size-4 shrink-0 text-gold" />
                     <span className="whitespace-nowrap">{item.label}</span>
@@ -125,20 +126,24 @@ export function Hero() {
           </div>
         </div>
 
-        {/* PRAWA STRONA - ZDJĘCIE RODZINY (KOD NIENARUSZONY) */}
-        <div className="relative flex items-center justify-center lg:justify-end">
+        {/* PRAWA STRONA - ZDJĘCIE RODZINY Z WYSTAJĄCĄ NAKŁADKĄ NA TELEFONIE */}
+        <div className="relative mb-6 flex items-center justify-center sm:mb-0 lg:justify-end">
           {/* Subtelna złota poświata w tle zdjęcia */}
-          <div className="absolute -inset-2 rounded-[2.5rem] bg-linear-to-tr from-gold/20 via-transparent to-gold/10 opacity-70 blur-xl" />
+          <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-tr from-gold/20 via-transparent to-gold/10 opacity-70 blur-xl" />
 
-          <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-white/15 bg-navy-900/50 shadow-2xl">
-            <img
-              src="/rodzinka.png"
-              alt="Szczęśliwa rodzina – życie bez długów po upadłości konsumenckiej"
-              className="aspect-4/3 sm:aspect-5/4 lg:aspect-4/5 h-full w-full object-cover object-center"
-            />
+          {/* Kontener ramki zdjęcia */}
+          <div className="relative w-full max-w-lg">
+            {/* Zdjęcie ujęte w zaokrągloną ramkę */}
+            <div className="overflow-hidden rounded-3xl border border-white/15 bg-navy-900/50 shadow-2xl">
+              <img
+                src="/rodzinka.png"
+                alt="Szczęśliwa rodzina – życie bez długów po upadłości konsumenckiej"
+                className="aspect-4/3 sm:aspect-5/4 lg:aspect-4/5 h-full w-full object-cover object-center"
+              />
+            </div>
 
-            {/* Nakładka z opisem na dole zdjęcia */}
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/10 bg-navy/90 p-4 text-center shadow-lg backdrop-blur sm:text-left">
+            {/* 💡 Nakładka z opisem: Na telefonie leży na pograniczu ramki (połowa na zdjęciu, połowa pod nim) */}
+            <div className="absolute inset-x-4 bottom-0 translate-y-1/2 rounded-2xl border border-white/15 bg-navy-900/95 p-4 text-center shadow-2xl backdrop-blur-md sm:bottom-4 sm:translate-y-0 sm:text-left">
               <p className="font-display text-base font-semibold text-white sm:text-lg">
                 Zacznij od nowa
               </p>
@@ -207,7 +212,7 @@ export function Hero() {
       </div>
 
       {/* 4. SEKCJA: BANER / CTA (SPRAWDŹ CZY UPADŁOŚĆ...) */}
-      <div className="border-t border-white/10 bg-linear-to-b from-navy to-navy-900 py-16">
+      <div className="border-t border-white/10 bg-gradient-to-b from-navy to-navy-900 py-16">
         <div className="mx-auto max-w-5xl px-5 text-center lg:px-8">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Sprawdź czy upadłość konsumencka jest rozwiązaniem dla Ciebie
@@ -218,7 +223,6 @@ export function Hero() {
 
           {/* Kafelki z przyciskami kontaktowymi */}
           <div className="mt-10 flex flex-col justify-center gap-5 sm:flex-row sm:items-center">
-            {/* Przycisk - Przeniesienie do formularza kontaktowego */}
             <a
               href="#kontakt"
               className="inline-flex items-center justify-center gap-3 rounded-xl bg-gold px-8 py-4 text-base font-semibold text-navy-900 shadow-xl transition-all hover:bg-gold-light hover:scale-105"
@@ -227,7 +231,6 @@ export function Hero() {
               <ArrowRight className="size-5" />
             </a>
 
-            {/* Nowy kafelek z telefonem */}
             <a
               href="tel:515515314"
               className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-base font-semibold text-white shadow-xl backdrop-blur transition-all hover:border-gold hover:bg-white/15 hover:scale-105"
