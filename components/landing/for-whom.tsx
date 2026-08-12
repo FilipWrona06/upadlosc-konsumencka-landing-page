@@ -1,3 +1,4 @@
+// components/landing/for-whom.tsx
 import {
   Users,
   ArrowRight,
@@ -65,13 +66,14 @@ export function ForWhom() {
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {situations.map((item, index) => {
             const Icon = item.icon;
-            // Siódmy element rozciągnięty dla zachowania symetrii
             const isLast = index === situations.length - 1;
             return (
               <div
                 key={item.text}
                 className={`flex items-center gap-4 rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition-all hover:border-gold/50 hover:shadow-md ${
-                  isLast ? "sm:col-span-2" : ""
+                  isLast
+                    ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.5rem)]"
+                    : "w-full"
                 }`}
               >
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-navy/5 text-gold">
