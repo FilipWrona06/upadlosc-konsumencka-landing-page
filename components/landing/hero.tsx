@@ -97,7 +97,7 @@ export function Hero() {
                 return (
                   <div
                     key={item.label}
-                    className="flex flex-1 min-w-[150px] sm:min-w-[160px] items-center justify-center gap-2.5 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white shadow-sm backdrop-blur transition-all hover:border-gold/50 hover:bg-white/10"
+                    className="flex flex-1 min-w-37.5 sm:min-w-40 items-center justify-center gap-2.5 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white shadow-sm backdrop-blur transition-all hover:border-gold/50 hover:bg-white/10"
                   >
                     <Icon className="size-4 shrink-0 text-gold" />
                     <span className="whitespace-nowrap">{item.label}</span>
@@ -129,7 +129,7 @@ export function Hero() {
         {/* PRAWA STRONA - ZDJĘCIE RODZINY Z WYSTAJĄCĄ NAKŁADKĄ NA TELEFONIE */}
         <div className="relative mb-6 flex items-center justify-center sm:mb-0 lg:justify-end">
           {/* Subtelna złota poświata w tle zdjęcia */}
-          <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-tr from-gold/20 via-transparent to-gold/10 opacity-70 blur-xl" />
+          <div className="absolute -inset-2 rounded-[2.5rem] bg-linear-to-tr from-gold/20 via-transparent to-gold/10 opacity-70 blur-xl" />
 
           {/* Kontener ramki zdjęcia */}
           <div className="relative w-full max-w-lg">
@@ -212,7 +212,7 @@ export function Hero() {
       </div>
 
       {/* 4. SEKCJA: BANER / CTA (SPRAWDŹ CZY UPADŁOŚĆ...) */}
-      <div className="border-t border-white/10 bg-gradient-to-b from-navy to-navy-900 py-16">
+      <div className="border-t border-white/10 bg-linear-to-b from-navy to-navy-900 py-16">
         <div className="mx-auto max-w-5xl px-5 text-center lg:px-8">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Sprawdź czy upadłość konsumencka jest rozwiązaniem dla Ciebie
