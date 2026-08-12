@@ -1,4 +1,3 @@
-// app/page.tsx
 import { SiteHeader } from "@/components/landing/site-header";
 import { Hero } from "@/components/landing/hero";
 import { Process } from "@/components/landing/process";
@@ -10,9 +9,9 @@ import { Contact } from "@/components/landing/contact";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { VariantPicker } from "@/components/ui/variant-picker";
 
-export default function Page() {
+export default function PageV2() {
   return (
-    <main className="theme-v1 bg-cream min-h-screen text-ink">
+    <main className="theme-v2 bg-cream min-h-screen text-ink">
       <SiteHeader />
       <Hero />
       <ForWhom />

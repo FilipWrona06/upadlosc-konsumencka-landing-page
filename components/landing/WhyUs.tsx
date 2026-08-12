@@ -1,3 +1,4 @@
+// components/landing/WhyUs.tsx
 import {
   GraduationCap,
   Heart,
@@ -65,7 +66,7 @@ export function WhyUs() {
           </h2>
         </div>
 
-        {/* 1. KAFELKI W STYLU DELETE.COM.PL */}
+        {/* 1. KAFELKI Z POWODAMI */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((item) => {
             const Icon = item.icon;
@@ -88,12 +89,12 @@ export function WhyUs() {
           })}
         </div>
 
-        {/* 2. BLOK "CZĘŚĆ GRUPY EXPERT PARTNER" (Z ATRYBUTEM NOFOLLOW DLA ROBOTÓW GOOGLE) */}
-        <div className="mt-16 rounded-3xl border border-black/5 bg-[#F4EFE6] p-8 lg:p-12 shadow-sm">
+        {/* 2. DYNAMICZNY BLOK "CZĘŚĆ GRUPY EXPERT PARTNER" */}
+        <div className="mt-16 rounded-3xl border border-black/10 bg-cream-dark p-8 shadow-sm lg:p-12">
           <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-5">
               <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-navy">
-                <Handshake className="size-4 text-navy" />
+                <Handshake className="size-4 text-gold" />
                 Zaufana współpraca
               </p>
 
@@ -107,7 +108,7 @@ export function WhyUs() {
                 oraz realną wiedzę i doświadczenie.
               </p>
 
-              {/* LOGO Z ATRYBUTEM NOFOLLOW */}
+              {/* LOGO PARTNERA */}
               <div className="mt-6">
                 <a
                   href="https://upadlosci-ekspert.pl/"
