@@ -1,13 +1,5 @@
 // components/landing-v2/site-footer-v2.tsx
-import {
-  Scale,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowUpRight,
-  ShieldCheck,
-  Lock,
-} from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, Lock } from "lucide-react";
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
@@ -82,21 +74,25 @@ const socials = [
 export function SiteFooterV2() {
   return (
     <footer className="relative overflow-hidden bg-navy-900 border-t border-white/10 text-white">
-      {/* Oświetlenie w tle */}
-      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 size-96 rounded-full bg-gold/5 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 size-96 rounded-full bg-emerald-500/5 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
         {/* GŁÓWNY GRID STOPKI */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
-          {/* KOLUMNA 1: LOGO, MISJA, SOCIAL MEDIA (4 KOLUMNY) */}
+          {/* KOLUMNA 1: LOGO, MISJA, SOCIAL MEDIA */}
           <div className="space-y-6 lg:col-span-4">
             <a href="#" className="flex items-center gap-3 group">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-white/10 text-gold transition-transform group-hover:scale-105">
-                <Scale className="size-5" strokeWidth={2} />
+              <div className="flex size-10 items-center justify-center rounded-xl bg-white p-1.5 border border-white/10 transition-transform group-hover:scale-105 shadow-inner">
+                <img
+                  src="/logo.png"
+                  alt="Logo Upadłość Konsumencka"
+                  className="size-full object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-lg tracking-tight text-white">
-                  UPADŁOŚĆ<span className="text-gold font-normal">.pl</span>
+                  UPADŁOŚĆ
+                  <span className="text-emerald-400 font-normal">.pl</span>
                 </span>
                 <span className="text-[10px] font-medium tracking-[0.16em] text-white/50">
                   CHORZÓW · ŚLĄSK · CAŁA POLSKA
@@ -110,7 +106,6 @@ export function SiteFooterV2() {
               prawomocny wyrok sądu.
             </p>
 
-            {/* IKONY SOCIAL MEDIA */}
             <div className="flex items-center gap-2.5 pt-1">
               {socials.map((s) => (
                 <a
@@ -119,20 +114,19 @@ export function SiteFooterV2() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition-all hover:border-gold/40 hover:bg-gold hover:text-navy-900 hover:scale-105"
+                  className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition-all hover:border-emerald-400/40 hover:bg-emerald-500 hover:text-navy-900 hover:scale-105"
                 >
                   <s.icon className="size-4" />
                 </a>
               ))}
             </div>
 
-            {/* PARTNER EXPERT PARTNER - ELEGANCKA INTEGRACJA */}
             <div className="pt-2">
               <a
                 href="https://upadlosci-ekspert.pl/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="group flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 hover:border-gold/30 hover:bg-white/10 transition-all max-w-xs"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 hover:border-emerald-400/30 hover:bg-white/10 transition-all max-w-xs"
               >
                 <div className="flex items-center gap-2.5">
                   <div className="rounded-lg bg-white p-1.5 shrink-0">
@@ -151,14 +145,14 @@ export function SiteFooterV2() {
                     </span>
                   </div>
                 </div>
-                <ArrowUpRight className="size-3.5 text-white/40 group-hover:text-gold transition-colors" />
+                <ArrowUpRight className="size-3.5 text-white/40 group-hover:text-emerald-400 transition-colors" />
               </a>
             </div>
           </div>
 
-          {/* KOLUMNA 2: NAWIGACJA (2 KOLUMNY) */}
+          {/* KOLUMNA 2: NAWIGACJA */}
           <div className="lg:col-span-2 lg:pl-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-gold block mb-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-4">
               Nawigacja
             </span>
             <ul className="space-y-2.5">
@@ -166,7 +160,7 @@ export function SiteFooterV2() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-xs sm:text-sm text-white/70 transition-colors hover:text-gold"
+                    className="text-xs sm:text-sm text-white/70 transition-colors hover:text-emerald-400"
                   >
                     {l.label}
                   </a>
@@ -175,9 +169,9 @@ export function SiteFooterV2() {
             </ul>
           </div>
 
-          {/* KOLUMNA 3: OBSZAR POMOCY (3 KOLUMNY) */}
+          {/* KOLUMNA 3: ZAKRES POMOCY */}
           <div className="lg:col-span-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-gold block mb-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-4">
               Zakres pomocy
             </span>
             <ul className="space-y-2.5">
@@ -186,25 +180,25 @@ export function SiteFooterV2() {
                   key={idx}
                   className="flex items-center gap-2 text-xs sm:text-sm text-white/70"
                 >
-                  <span className="size-1 rounded-full bg-gold shrink-0" />
+                  <span className="size-1 rounded-full bg-emerald-400 shrink-0" />
                   <span>{scope}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* KOLUMNA 4: DANE KONTAKTOWE I DYŻUR (3 KOLUMNY) */}
+          {/* KOLUMNA 4: DANE KONTAKTOWE I BIURO */}
           <div className="space-y-4 lg:col-span-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-gold block mb-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-4">
               Biuro i Kontakt
             </span>
 
             <div className="space-y-3.5 text-xs sm:text-sm">
               <a
                 href="tel:515515314"
-                className="flex items-center gap-3 text-white font-bold transition-colors hover:text-gold group"
+                className="flex items-center gap-3 text-white font-bold transition-colors hover:text-emerald-400 group"
               >
-                <div className="flex size-8 items-center justify-center rounded-lg bg-gold/20 text-gold group-hover:bg-gold group-hover:text-navy-900 transition-colors">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-navy-900 transition-colors">
                   <Phone className="size-4" />
                 </div>
                 <span>515 515 314</span>
@@ -212,16 +206,16 @@ export function SiteFooterV2() {
 
               <a
                 href="mailto:kontakt@kancelaria.pl"
-                className="flex items-center gap-3 text-white/80 transition-colors hover:text-gold group"
+                className="flex items-center gap-3 text-white/80 transition-colors hover:text-emerald-400 group"
               >
-                <div className="flex size-8 items-center justify-center rounded-lg bg-white/10 text-gold group-hover:bg-gold group-hover:text-navy-900 transition-colors">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-white/10 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-navy-900 transition-colors">
                   <Mail className="size-4" />
                 </div>
                 <span>kontakt@kancelaria.pl</span>
               </a>
 
               <div className="flex items-start gap-3 text-white/70 pt-1">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-white/10 text-gold shrink-0 mt-0.5">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-white/10 text-emerald-400 shrink-0 mt-0.5">
                   <MapPin className="size-4" />
                 </div>
                 <span className="leading-snug">
@@ -234,7 +228,7 @@ export function SiteFooterV2() {
 
             <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] text-white/60">
               <div className="flex items-center gap-1.5 font-semibold text-white/90 mb-1">
-                <Lock className="size-3 text-gold" />
+                <Lock className="size-3 text-emerald-400" />
                 Dyskrecja i tajemnica zawodowa
               </div>
               Obsługa spraw w biurze w Chorzowie oraz 100% online w całej
@@ -265,7 +259,7 @@ export function SiteFooterV2() {
                 href="https://www.instagram.com/filip_wrona/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-white/80 underline underline-offset-4 decoration-gold/50 transition-colors hover:text-gold hover:decoration-gold"
+                className="font-medium text-white/80 underline underline-offset-4 decoration-emerald-400/50 transition-colors hover:text-emerald-400 hover:decoration-emerald-400"
               >
                 Filip Wrona
               </a>

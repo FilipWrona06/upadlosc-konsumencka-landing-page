@@ -2,16 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  Phone,
-  Menu,
-  X,
-  ArrowUpRight,
-  Scale,
-  Clock,
-  MapPin,
-  ShieldCheck,
-} from "lucide-react";
+import { Phone, Menu, X, ArrowUpRight, Clock, MapPin } from "lucide-react";
 
 const navLinks = [
   { label: "Dla kogo", href: "#dla-kogo" },
@@ -69,7 +60,6 @@ export function SiteHeaderV2() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Blokada scrolla w tle gdy otwarte jest menu mobilne
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -88,10 +78,14 @@ export function SiteHeaderV2() {
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          {/* LOGO */}
+          {/* NOWE LOGO Z TARCZĄ */}
           <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
-            <div className="flex size-9 sm:size-10 items-center justify-center rounded-xl bg-white/10 text-emerald-400 border border-white/10 transition-transform group-hover:scale-105">
-              <Scale className="size-4.5 sm:size-5" />
+            <div className="flex size-9 sm:size-10 items-center justify-center rounded-xl bg-white p-1.5 border border-white/10 transition-transform group-hover:scale-105 shadow-inner">
+              <img
+                src="/logo.png"
+                alt="Logo Upadłość Konsumencka"
+                className="size-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
@@ -155,7 +149,7 @@ export function SiteHeaderV2() {
             </a>
           </div>
 
-          {/* MOBILE PRZYCISKI (TELEFON + HAMBURGER) */}
+          {/* MOBILE PRZYCISKI */}
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href="tel:515515314"
@@ -177,12 +171,10 @@ export function SiteHeaderV2() {
         </div>
       </header>
 
-      {/* NOWOCZESNE MENU MOBILNE (DRAWER Z WYŻSZYM Z-INDEXEM I BRAKIEM KOLIZJI) */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="fixed inset-0 top-14.25 z-60 bg-navy-950/98 backdrop-blur-2xl px-5 py-6 flex flex-col justify-between overflow-y-auto lg:hidden text-white animate-in fade-in slide-in-from-top-4 duration-200">
-          {/* GÓRNA CZĘŚĆ: STATUS + KAFELKI NAWIGACJI */}
           <div className="space-y-4">
-            {/* Status w menu */}
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">
                 Menu Kancelarii
@@ -193,7 +185,6 @@ export function SiteHeaderV2() {
               </span>
             </div>
 
-            {/* Lista linków jako dotykowe kafelki */}
             <nav className="flex flex-col space-y-2">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace("#", "");
@@ -222,7 +213,6 @@ export function SiteHeaderV2() {
             </nav>
           </div>
 
-          {/* DOLNA CZĘŚĆ: SZYBKI KONTAKT I ADRES (BEZ KOLIZJI Z PICKEREM) */}
           <div className="pt-5 mt-4 border-t border-white/10 space-y-3 pb-8">
             <a
               href="tel:515515314"
