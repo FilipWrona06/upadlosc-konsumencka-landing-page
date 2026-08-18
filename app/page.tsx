@@ -8,11 +8,10 @@ import { WhyUs } from "@/components/landing/WhyUs";
 import { Faq } from "@/components/landing/faq";
 import { Contact } from "@/components/landing/contact";
 import { SiteFooter } from "@/components/landing/site-footer";
-import { VariantPicker } from "@/components/ui/variant-picker";
 
 export default function Page() {
   return (
-    <main className="theme-v1 bg-cream min-h-screen text-ink">
+    <main className="bg-cream min-h-screen text-ink">
       <SiteHeader />
       <Hero />
       <ForWhom />
@@ -22,7 +21,6 @@ export default function Page() {
       <Faq />
       <Contact />
       <SiteFooter />
-      <VariantPicker />
     </main>
   );
 }
