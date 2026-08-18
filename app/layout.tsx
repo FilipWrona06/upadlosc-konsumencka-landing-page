@@ -2,6 +2,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { VersionPicker } from "@/components/ui/Version-picker"; // <-- Import
 import "./globals.css";
 
 const inter = Inter({
@@ -18,10 +19,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Upadłość Konsumencka Warszawa · Krzysztof Kopacz",
+  title: "Upadłość Konsumencka Chorzów · Kancelaria Śląsk",
   description:
-    "Kompleksowa pomoc w przeprowadzeniu upadłości konsumenckiej. Spokojnie, dyskretnie, od A do Z. Bezpłatna, niezobowiązująca konsultacja.",
-  generator: "v0.app",
+    "Kompleksowa pomoc w przeprowadzeniu upadłości konsumenckiej na Śląsku. Zatrzymanie komornika i oddłużenie od A do Z. Bezpłatna, poufna analiza.",
 };
 
 export const viewport: Viewport = {
@@ -37,6 +37,7 @@ export default function RootLayout({
     <html lang="pl" className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-sans antialiased">
         {children}
+        <VersionPicker /> {/* <-- Pływający pasek przełączania na dole */}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
