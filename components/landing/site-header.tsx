@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Menu, X, ShieldCheck, Mail } from "lucide-react";
+import { Phone, Menu, X, Mail } from "lucide-react";
 
-// Lista zakładek w 2. banerze dokładnie według wytycznych klienta
 const navLinks = [
   { label: "Dla kogo", href: "#dla-kogo" },
   { label: "Jak to działa", href: "#jak-to-dziala" },
@@ -16,9 +15,14 @@ const navLinks = [
 function Logo() {
   return (
     <a href="#" className="flex items-center gap-3 shrink-0">
-      <span className="flex size-10 items-center justify-center rounded-full bg-navy text-gold">
-        <ShieldCheck className="size-5" strokeWidth={1.75} />
-      </span>
+      {/* TWOJE LOGO / SYGNET */}
+      <img
+        src="/logo.svg" /* Jeśli używasz PNG, zmień na: /logo.png */
+        alt="Logo Upadłość Konsumencka"
+        className="size-10 object-contain"
+      />
+
+      {/* NAPIS OBOK LOGO */}
       <span className="leading-tight">
         <span className="block font-display text-base font-semibold tracking-wide text-ink sm:text-lg">
           UPADŁOŚĆ <span className="text-gold">KONSUMENCKA</span>
@@ -39,12 +43,10 @@ export function SiteHeader() {
       {/* 1. PIERWSZY BANER NA GÓRZE */}
       <div className="bg-navy py-2 text-xs text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 sm:flex-row lg:px-8">
-          {/* Lewa strona: tekst */}
           <div className="font-medium tracking-wide text-white/90">
             Upadłość konsumencka Chorzów / Śląsk
           </div>
 
-          {/* Prawa strona: e-mail z ikoną + telefon z dopiskiem bezpłatna konsultacja */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a
               href="mailto:kontakt@kancelaria.pl"
@@ -74,7 +76,6 @@ export function SiteHeader() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           <Logo />
 
-          {/* Zakładki dla desktopu */}
           <nav className="hidden items-center gap-4 xl:flex xl:gap-6">
             {navLinks.map((link) => (
               <a
@@ -87,7 +88,6 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          {/* Przycisk mobile hamburger */}
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -99,7 +99,7 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* MENU MOBILNE (dla telefonów/tabletów) */}
+      {/* MENU MOBILNE */}
       {open && (
         <div className="border-t border-black/5 bg-cream px-5 pb-6 pt-2 xl:hidden">
           <nav className="flex flex-col">

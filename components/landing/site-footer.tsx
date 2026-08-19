@@ -1,4 +1,4 @@
-import { ShieldCheck, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
@@ -43,7 +43,6 @@ function FacebookIcon({ className }: { className?: string }) {
   );
 }
 
-// Zakładki menu zgodne ze strukturą całej strony
 const pageLinks = [
   { label: "Upadłość Konsumencka", href: "#upadlosc-konsumencka" },
   { label: "Dla kogo", href: "#dla-kogo" },
@@ -65,12 +64,17 @@ export function SiteFooter() {
     <footer className="bg-navy-900 border-t border-white/10 text-white">
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-3">
-          {/* KOLUMNA 1: LOGO, OPIS, SOCIAL MEDIA, LOGO EXPERT PARTNER */}
+          {/* KOLUMNA 1: LOGO + NAPIS, OPIS, SOCIAL MEDIA, LOGO EXPERT PARTNER */}
           <div>
             <a href="#" className="flex items-center gap-3">
-              <span className="flex size-11 items-center justify-center rounded-full bg-white/10 text-gold">
-                <ShieldCheck className="size-6" strokeWidth={1.75} />
-              </span>
+              {/* TWOJE LOGO / SYGNET */}
+              <img
+                src="/logo.svg" /* Jeśli używasz PNG, zmień na: /logo.png */
+                alt="Logo Upadłość Konsumencka"
+                className="size-11 object-contain"
+              />
+
+              {/* NAPIS OBOK LOGO */}
               <span className="leading-tight">
                 <span className="block font-display text-base font-semibold tracking-wide">
                   UPADŁOŚĆ <span className="text-gold">KONSUMENCKA</span>
@@ -99,7 +103,7 @@ export function SiteFooter() {
               ))}
             </div>
 
-            {/* LINK DO PARTNERA Z ATRYBUTEM NOFOLLOW */}
+            {/* LINK DO PARTNERA */}
             <div className="mt-6">
               <a
                 href="https://upadlosci-ekspert.pl/"
@@ -167,7 +171,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* DOLNY PASEK COPYRIGHT Z ODNOŚNIKIEM DO AUTORA */}
+        {/* DOLNY PASEK COPYRIGHT */}
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 Upadłość Konsumencka Chorzów / Śląsk. Wszelkie prawa

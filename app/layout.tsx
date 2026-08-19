@@ -2,7 +2,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { VersionPicker } from "@/components/ui/Version-picker";
 import "./globals.css";
 
 const inter = Inter({
@@ -181,7 +180,6 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased selection:bg-emerald-500 selection:text-white">
         {children}
-        <VersionPicker />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
