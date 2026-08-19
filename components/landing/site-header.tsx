@@ -40,9 +40,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur">
-      {/* 1. PIERWSZY BANER NA GÓRZE */}
-      <div className="bg-navy py-2 text-xs text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 sm:flex-row lg:px-8">
+      {/* 1. PIERWSZY BANER NA GÓRZE (ustawiony na h-20 / 80px) */}
+      <div className="bg-navy text-xs text-white sm:text-sm">
+        <div className="mx-auto flex min-h-20 max-w-7xl flex-col items-center justify-between gap-2 px-5 py-3 sm:h-20 sm:flex-row sm:py-0 lg:px-8">
           <div className="font-medium tracking-wide text-white/90">
             Upadłość konsumencka Chorzów / Śląsk
           </div>
@@ -50,16 +50,16 @@ export function SiteHeader() {
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a
               href="mailto:kontakt@kancelaria.pl"
-              className="flex items-center gap-1.5 text-white/90 transition-colors hover:text-gold"
+              className="flex items-center gap-2 text-white/90 transition-colors hover:text-gold"
             >
-              <Mail className="size-3.5 text-gold" />
+              <Mail className="size-4 text-gold" />
               <span>kontakt@kancelaria.pl</span>
             </a>
             <a
               href="tel:515515314"
-              className="flex items-center gap-1.5 text-white/90 transition-colors hover:text-gold"
+              className="flex items-center gap-2 text-white/90 transition-colors hover:text-gold"
             >
-              <Phone className="size-3.5 text-gold" />
+              <Phone className="size-4 text-gold" />
               <span>
                 515 515 314{" "}
                 <span className="font-medium text-gold">
@@ -71,7 +71,7 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* 2. DRUGI BANER Z ZAKŁADKAMI */}
+      {/* 2. DRUGI BANER Z ZAKŁADKAMI (pozostawiony na h-20 / 80px) */}
       <div className="border-b border-black/5 bg-cream">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           <Logo />

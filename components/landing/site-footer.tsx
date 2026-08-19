@@ -62,7 +62,7 @@ const socials = [
 export function SiteFooter() {
   return (
     <footer className="bg-navy-900 border-t border-white/10 text-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 py-8 sm:py-10 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-3">
           {/* KOLUMNA 1: LOGO + NAPIS, OPIS, SOCIAL MEDIA, LOGO EXPERT PARTNER */}
           <div>
@@ -172,7 +172,7 @@ export function SiteFooter() {
         </div>
 
         {/* DOLNY PASEK COPYRIGHT */}
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 Upadłość Konsumencka Chorzów / Śląsk. Wszelkie prawa
             zastrzeżone. · Część Grupy Expert Partner

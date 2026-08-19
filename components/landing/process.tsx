@@ -1,3 +1,4 @@
+// components/landing/process.tsx
 import {
   Workflow,
   PhoneCall,
@@ -44,10 +45,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section
-      id="jak-to-dziala"
-      className="scroll-mt-24 bg-cream py-16 lg:py-24"
-    >
+    <section id="jak-to-dziala" className="scroll-mt-24 bg-cream py-8 sm:py-10">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* NAGŁÓWEK SEKCJI */}
         <div className="mx-auto max-w-3xl text-center">
@@ -64,7 +62,7 @@ export function Process() {
         </div>
 
         {/* WIZUALIZACJA KROKÓW (LINIA CZASU Z KARTAMI) */}
-        <div className="relative mt-14 max-w-4xl mx-auto">
+        <div className="relative mt-10 max-w-4xl mx-auto">
           {/* Pionowa linia łącząca kroki (dla urządzeń od sm w górę) */}
           <div className="absolute left-8.75 top-8 bottom-8 w-0.5 bg-navy/15 hidden sm:block" />
 
@@ -104,7 +102,7 @@ export function Process() {
         </div>
 
         {/* PRZYCISK ZACHĘCAJĄCY DO KONTAKTU */}
-        <div className="mt-14 text-center">
+        <div className="mt-10 text-center">
           <a
             href="#kontakt"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-navy px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-navy-700 hover:scale-105"

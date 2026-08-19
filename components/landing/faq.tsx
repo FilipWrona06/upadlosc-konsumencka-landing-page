@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { HelpCircle, Plus, Minus } from "lucide-react"
+import { useState } from "react";
+import { HelpCircle, Plus, Minus } from "lucide-react";
 
 // Miejsce na pytania i odpowiedzi (tutaj wkleisz docelowe pytania od klienta)
 const faqs = [
@@ -37,15 +37,14 @@ const faqs = [
     q: "Czy moje dane są bezpieczne?",
     a: "Tak. Sprawę prowadzę w pełnej poufności, a Twoje dane przetwarzam wyłącznie w celu udzielenia pomocy.",
   },
-]
+];
 
 export function Faq() {
-  const [open, setOpen] = useState<number | null>(null)
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="scroll-mt-24 bg-cream py-16 lg:py-24">
+    <section id="faq" className="scroll-mt-24 bg-cream py-8 sm:py-10">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        
         {/* LEWA STRONA - NAGŁÓWEK SEKCJI */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-navy">
@@ -56,7 +55,8 @@ export function Faq() {
             Odpowiedzi na najczęstsze pytania
           </h2>
           <p className="mt-4 max-w-md text-base leading-relaxed text-ink/70">
-            Najczęstsze wątpliwości, które pojawiają się u osób rozważających upadłość konsumencką.
+            Najczęstsze wątpliwości, które pojawiają się u osób rozważających
+            upadłość konsumencką.
           </p>
           <p className="mt-6 text-sm text-ink/70">
             Nie znalazłeś odpowiedzi na swoje pytanie?{" "}
@@ -73,7 +73,7 @@ export function Faq() {
         {/* PRAWA STRONA - AKORDEON Z PLUSIKAMI */}
         <div className="divide-y divide-black/10 border-y border-black/10">
           {faqs.map((faq, i) => {
-            const isOpen = open === i
+            const isOpen = open === i;
             return (
               <div key={faq.q} className="py-3">
                 <button
@@ -110,11 +110,10 @@ export function Faq() {
                   </p>
                 )}
               </div>
-            )
+            );
           })}
         </div>
-
       </div>
     </section>
-  )
+  );
 }

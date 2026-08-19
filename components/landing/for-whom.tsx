@@ -46,7 +46,7 @@ const situations = [
 
 export function ForWhom() {
   return (
-    <section id="dla-kogo" className="scroll-mt-24 bg-cream py-16 lg:py-24">
+    <section id="dla-kogo" className="scroll-mt-24 bg-cream py-8 sm:py-10">
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         {/* NAGŁÓWEK SEKCJI */}
         <div className="text-center">
@@ -57,9 +57,6 @@ export function ForWhom() {
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-ink sm:text-4xl lg:text-5xl">
             Długi przejęły kontrolę nad Twoim życiem?
           </h2>
-          <p className="mt-4 text-lg font-medium text-navy/80 sm:text-xl">
-            Możliwe, że:
-          </p>
         </div>
 
         {/* SIATKA SYTUACJI (KAFELKI) */}
@@ -88,7 +85,7 @@ export function ForWhom() {
         </div>
 
         {/* BANER Z ODNOŚNIKIEM DO FORMULARZA KONTAKTOWEGO */}
-        <div className="mt-14 rounded-3xl bg-navy p-8 text-center text-white shadow-xl sm:p-12">
+        <div className="mt-10 rounded-3xl bg-navy p-8 text-center text-white shadow-xl sm:p-12">
           <h3 className="font-display text-2xl font-bold leading-snug tracking-tight text-white sm:text-3xl lg:text-4xl">
             Porozmawiajmy o Twojej sytuacji – umów się na bezpłatną konsultację
           </h3>

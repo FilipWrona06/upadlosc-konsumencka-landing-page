@@ -66,7 +66,7 @@ const features = [
 
 export function Pricing() {
   return (
-    <section id="cennik" className="scroll-mt-24 bg-cream py-16 lg:py-24">
+    <section id="cennik" className="scroll-mt-24 bg-cream py-8 sm:py-10">
       <div className="mx-auto max-w-3xl px-5 text-center lg:px-8">
         <p className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-navy">
           <CreditCard className="size-4 text-gold" />
@@ -123,7 +123,7 @@ export function Pricing() {
             <div className="mt-8 flex items-start gap-3 rounded-2xl bg-navy/5 p-4 text-xs sm:text-sm leading-relaxed text-ink/75 border border-black/5">
               <ShieldCheck className="size-5 shrink-0 text-navy mt-0.5" />
               <p>
-                Ostateczną cenę ustalam indywidualnie i potwierdzam pisemnie
+                Ostateczną cenę ustalamy indywidualnie i potwierdzamy pisemnie
                 przed rozpoczęciem współpracy, bez ukrytych opłat.
               </p>
             </div>

@@ -24,7 +24,7 @@ export function Contact() {
   return (
     <section
       id="kontakt"
-      className="scroll-mt-24 bg-navy py-16 text-white lg:py-24"
+      className="scroll-mt-24 bg-navy py-8 text-white sm:py-10"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* NAGŁÓWEK SEKCJI WEDŁUG WYTYCZNYCH */}

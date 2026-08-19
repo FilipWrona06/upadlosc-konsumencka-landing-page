@@ -65,8 +65,8 @@ const guaranteeItems = [
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy text-white">
-      {/* 1. GÓRNA CZĘŚĆ HERO (GŁÓWNE HASŁO + ZDJĘCIE RODZINY) */}
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-16">
+      {/* 1. GÓRNA CZĘŚĆ HERO */}
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pt-3 pb-8 sm:pt-5 sm:pb-10 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pt-6 lg:pb-10">
         {/* LEWA STRONA - HASŁA I IKONY */}
         <div className="flex flex-col justify-center">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-gold">
@@ -126,28 +126,21 @@ export function Hero() {
           </div>
         </div>
 
-        {/* PRAWA STRONA - ZDJĘCIE RODZINY Z WYSTAJĄCĄ NAKŁADKĄ NA TELEFONIE */}
+        {/* PRAWA STRONA - ZDJĘCIE RODZINY */}
         <div className="relative mb-6 flex items-center justify-center sm:mb-0 lg:justify-end">
-          {/* Subtelna złota poświata w tle zdjęcia */}
           <div className="absolute -inset-2 rounded-[2.5rem] bg-linear-to-tr from-gold/20 via-transparent to-gold/10 opacity-70 blur-xl" />
 
-          {/* Kontener ramki zdjęcia */}
           <div className="relative w-full max-w-lg">
-            {/* Zdjęcie ujęte w zaokrągloną ramkę */}
             <div className="overflow-hidden rounded-3xl border border-white/15 bg-navy-900/50 shadow-2xl">
               <img
-                src="/rodzinka.png"
+                src="/rodzinka.jpg"
                 alt="Szczęśliwa rodzina – życie bez długów po upadłości konsumenckiej"
                 className="aspect-4/3 sm:aspect-5/4 lg:aspect-4/5 h-full w-full object-cover object-center"
               />
             </div>
 
-            {/* 💡 Nakładka z opisem: Na telefonie leży na pograniczu ramki (połowa na zdjęciu, połowa pod nim) */}
-            <div className="absolute inset-x-4 bottom-0 translate-y-1/2 rounded-2xl border border-white/15 bg-navy-900/95 p-4 text-center shadow-2xl backdrop-blur-md sm:bottom-4 sm:translate-y-0 sm:text-left">
-              <p className="font-display text-base font-semibold text-white sm:text-lg">
-                Zacznij od nowa
-              </p>
-              <p className="text-xs font-medium uppercase tracking-[0.14em] text-gold">
+            <div className="absolute inset-x-4 bottom-0 flex min-h-[4.5rem] translate-y-1/2 items-center justify-center rounded-2xl border border-white/15 bg-navy-900/95 p-4 text-center shadow-2xl backdrop-blur-md sm:bottom-4 sm:translate-y-0">
+              <p className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-gold sm:text-base">
                 Odzyskaj spokój dla swojej rodziny
               </p>
             </div>
@@ -155,22 +148,22 @@ export function Hero() {
         </div>
       </div>
 
-      {/* 2. SEKCJA: CO MOŻESZ ZYSKAĆ */}
-      <div className="border-t border-white/10 bg-navy-900/40 py-16">
+      {/* 2. SEKCJA: CO MOŻESZ ZYSKAĆ (ZAKOTWICZONE IKONKI I TEKSTY) */}
+      <div className="border-t border-white/10 bg-navy-900/40 py-8 sm:py-10">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <h2 className="text-center font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Co możesz zyskać
           </h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {benefitsItems.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center shadow-lg backdrop-blur transition-all hover:border-gold/40 hover:bg-white/10"
+                  className="flex h-full flex-col items-center justify-start rounded-2xl border border-white/10 bg-white/5 p-6 text-center shadow-lg backdrop-blur transition-all hover:border-gold/40 hover:bg-white/10"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-xl bg-gold/20 text-gold mb-4">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gold/20 text-gold mb-4">
                     <Icon className="size-6" />
                   </span>
                   <h3 className="font-display text-base font-semibold text-white">
@@ -183,22 +176,22 @@ export function Hero() {
         </div>
       </div>
 
-      {/* 3. SEKCJA: GWARANTUJEMY */}
-      <div className="py-16">
+      {/* 3. SEKCJA: GWARANTUJEMY (ZAKOTWICZONE IKONKI I TEKSTY) */}
+      <div className="py-8 sm:py-10">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <h2 className="text-center font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Gwarantujemy
           </h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3 max-w-5xl mx-auto">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3 max-w-5xl mx-auto">
             {guaranteeItems.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="flex flex-col items-center justify-center rounded-2xl border border-gold/30 bg-navy-900/80 p-6 text-center shadow-lg backdrop-blur transition-all hover:border-gold"
+                  className="flex h-full flex-col items-center justify-start rounded-2xl border border-gold/30 bg-navy-900/80 p-6 text-center shadow-lg backdrop-blur transition-all hover:border-gold"
                 >
-                  <span className="flex size-14 items-center justify-center rounded-full bg-gold text-navy-900 mb-4 shadow-md">
+                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-gold text-navy-900 mb-4 shadow-md">
                     <Icon className="size-7" />
                   </span>
                   <h3 className="font-display text-base font-semibold text-white leading-snug">
@@ -211,8 +204,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* 4. SEKCJA: BANER / CTA (SPRAWDŹ CZY UPADŁOŚĆ...) */}
-      <div className="border-t border-white/10 bg-linear-to-b from-navy to-navy-900 py-16">
+      {/* 4. SEKCJA: BANER / CTA */}
+      <div className="border-t border-white/10 bg-linear-to-b from-navy to-navy-900 py-8 sm:py-10">
         <div className="mx-auto max-w-5xl px-5 text-center lg:px-8">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Sprawdź czy upadłość konsumencka jest rozwiązaniem dla Ciebie
@@ -221,8 +214,7 @@ export function Hero() {
             Bez zobowiązań. Bez oceniania. Konkretnie o Twojej sytuacji.
           </p>
 
-          {/* Kafelki z przyciskami kontaktowymi */}
-          <div className="mt-10 flex flex-col justify-center gap-5 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col justify-center gap-5 sm:flex-row sm:items-center">
             <a
               href="#kontakt"
               className="inline-flex items-center justify-center gap-3 rounded-xl bg-gold px-8 py-4 text-base font-semibold text-navy-900 shadow-xl transition-all hover:bg-gold-light hover:scale-105"

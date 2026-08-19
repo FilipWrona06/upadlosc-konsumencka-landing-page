@@ -23,7 +23,7 @@ const reasons = [
   },
   {
     icon: ShieldCheck,
-    title: "Proste zasady",
+    title: "Proste i przejrzyste zasady",
     text: "Pomagamy w najtrudniejszych sprawach dbając o komfort i zadowolenie naszych klientów. Wspieramy, dzielimy się doświadczeniem i prowadzimy sprawy z największą dbałością o każdy szczegół od bezpłatnej konsultacji poprzez zbieranie i analizowanie dokumentacji, aż do zakończenia postępowania upadłościowego.",
   },
   {
@@ -53,7 +53,7 @@ const partnerFeatures = [
 
 export function WhyUs() {
   return (
-    <section id="dlaczego-my" className="scroll-mt-24 bg-cream py-16 lg:py-24">
+    <section id="dlaczego-my" className="scroll-mt-24 bg-cream py-8 sm:py-10">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* NAGŁÓWEK SEKCJI */}
         <div className="text-center">
