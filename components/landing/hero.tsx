@@ -139,7 +139,7 @@ export function Hero() {
               />
             </div>
 
-            <div className="absolute inset-x-4 bottom-0 flex min-h-[4.5rem] translate-y-1/2 items-center justify-center rounded-2xl border border-white/15 bg-navy-900/95 p-4 text-center shadow-2xl backdrop-blur-md sm:bottom-4 sm:translate-y-0">
+            <div className="absolute inset-x-4 bottom-0 flex min-h-18 translate-y-1/2 items-center justify-center rounded-2xl border border-white/15 bg-navy-900/95 p-4 text-center shadow-2xl backdrop-blur-md sm:bottom-4 sm:translate-y-0">
               <p className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-gold sm:text-base">
                 Odzyskaj spokój dla swojej rodziny
               </p>
